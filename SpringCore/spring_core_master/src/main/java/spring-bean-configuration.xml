@@ -4,8 +4,10 @@
 
 <beans>
 	
-	<bean id= "personBean" class="com.prakhar.parwal.data.Person">
-	
+	<bean id="personBeanPostProcessor" class="com.prakhar.parwal.bean.post_processors.PersonBeanPostProcessor"/>
+	<bean id= "personBean" class="com.prakhar.parwal.bean.Person" scope="prototype" init-method="initBean" destroy-method="destroyBean">
 	</bean>
+	
+	
 	
 </beans>
