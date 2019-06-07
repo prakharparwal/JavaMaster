@@ -12,5 +12,13 @@ public class Performer {
 		System.out.println(e1);
 		Employee e2 = (Employee)context.getBean("employeeBean");
 		System.out.println(e2);
+		
+		System.out.println("-----------");
+		Car c = (Car) context.getBean("carBean");
+		System.out.println(c);
+		
+		System.out.println("-----------");
+		Car c1 = (Car) context.getBean("carBeanInstance");
+		System.out.println(c1);
 	}
 }

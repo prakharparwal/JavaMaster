@@ -9,5 +9,9 @@
 	
 	<bean id="carBean" class="com.prakhar.parwal.bean.initialize_bean_factory_method.VehicleFactory"
 		factory-method="getInstance" />
+	
+	<bean id="vehicleFactoryBean" class="com.prakhar.parwal.bean.initialize_bean_factory_method.VehicleFactory" />
+	<bean id="carBeanInstance" class="com.prakhar.parwal.bean.initialize_bean_factory_method.VehicleFactory" 
+		factory-method="getVehicle" factory-bean="vehicleFactoryBean" />
 
 </beans>
