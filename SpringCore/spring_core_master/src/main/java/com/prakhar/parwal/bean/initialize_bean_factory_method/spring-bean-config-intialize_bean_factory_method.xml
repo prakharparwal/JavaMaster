@@ -6,5 +6,8 @@
 
 	<bean id="employeeBean" class="com.prakhar.parwal.bean.initialize_bean_factory_method.Employee" 
 		factory-method="getEmployee"></bean>
+	
+	<bean id="carBean" class="com.prakhar.parwal.bean.initialize_bean_factory_method.VehicleFactory"
+		factory-method="getInstance" />
 
 </beans>
