@@ -8,6 +8,12 @@
 		<property name="id" value="101"/>
 		<property name="name" value="Prakhar" />
 		<property name="address" ref="addressBean" />
+		<property name="vehicles">
+			<list>
+				<ref bean="twoWheelerBean"/>
+				<ref bean="fourWheelerBean"/>
+			</list>
+		</property>
 	</bean>
 	
 	<bean id="addressBean" class="com.prakhar.parwal.dependency_injection.Address">
@@ -18,4 +24,13 @@
 		<property name="country" value="India" />
 	</bean>
 	
+	<bean id="twoWheelerBean" class="com.prakhar.parwal.dependency_injection.Vehicle">
+		<property name="type" value="1"/>
+		<property name="name" value="Twister"/>
+	</bean> 
+	
+	<bean id="fourWheelerBean" class="com.prakhar.parwal.dependency_injection.Vehicle">
+		<property name="type" value="2"/>
+		<property name="name" value="i20"/>
+	</bean>
 </beans>
