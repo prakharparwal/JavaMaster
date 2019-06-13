@@ -2,6 +2,7 @@ package com.prakhar.parwal.dependency_injection;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class Person {
@@ -15,7 +16,7 @@ public class Person {
 	//Custom object
 	private Map<Integer, CustomObject> customObjects;
 	
-	private Map<String, String> properties;
+	private Properties properties;
 	
 	public int getId() {
 		return id;
@@ -59,19 +60,18 @@ public class Person {
 		this.customObjects = customObjects;
 	}
 	
-	public Map<String, String> getProperties() {
+	public Properties getProperties() {
 		return properties;
 	}
-	public void setProperties(Map<String, String> properties) {
+	public void setProperties(Properties properties) {
 		this.properties = properties;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", vehicles=" + vehicles
 				+ ", bankAccounts=" + bankAccounts + ", customObjects=" + customObjects + ", properties=" + properties
 				+ "]";
 	}
-	
 	
 }
