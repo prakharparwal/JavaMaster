@@ -34,7 +34,7 @@
 		
 		<property name="properties">
 			<props>
-				<prop key="PropKey1">PropValue1</prop>
+				<prop key="propKey1">PropValue1</prop>
 			</props>	
 		</property>
 		
