@@ -31,6 +31,13 @@
 			</map>
 		</property>
 		
+		
+		<property name="properties">
+			<props>
+				<prop key="PropKey1">PropValue1</prop>
+			</props>	
+		</property>
+		
 	</bean>
 	
 	<bean id="axisAccount" class="com.prakhar.parwal.dependency_injection.BankAccount">
@@ -74,6 +81,7 @@
 	<bean id="customObject2" class="com.prakhar.parwal.dependency_injection.CustomObject">
 		<property name="id" value="102"/>
 	</bean>
+	
 	
 	
 </beans>

@@ -11,8 +11,11 @@ public class Person {
 	private Address address;
 	private List<Vehicle> vehicles;
 	private Set<BankAccount> bankAccounts;
+	
 	//Custom object
 	private Map<Integer, CustomObject> customObjects;
+	
+	private Map<String, String> properties;
 	
 	public int getId() {
 		return id;
@@ -56,12 +59,19 @@ public class Person {
 		this.customObjects = customObjects;
 	}
 	
+	public Map<String, String> getProperties() {
+		return properties;
+	}
+	public void setProperties(Map<String, String> properties) {
+		this.properties = properties;
+	}
+
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", vehicles=" + vehicles
-				+ ", bankAccounts=" + bankAccounts + "]";
+				+ ", bankAccounts=" + bankAccounts + ", customObjects=" + customObjects + ", properties=" + properties
+				+ "]";
 	}
-	
 	
 	
 }
