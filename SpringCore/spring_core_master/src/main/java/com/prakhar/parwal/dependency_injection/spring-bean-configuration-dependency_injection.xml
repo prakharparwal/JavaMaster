@@ -14,7 +14,40 @@
 				<ref bean="fourWheelerBean"/>
 			</list>
 		</property>
+		
+		<property name="bankAccounts">
+			<set>
+				<ref bean="axisAccount"/>
+				<ref bean="unionAccount"/>
+				<ref bean="hdfcAccount"/>
+				<ref bean="axisAccount"/> <!--  Maintaining uniqueness -->
+			</set>
+		</property>
+		
+		<property name="customObjects">
+			<map>
+				<entry key="1" value-ref="customObject1"/>
+				<entry key="2" value-ref="customObject2"/>
+			</map>
+		</property>
+		
 	</bean>
+	
+	<bean id="axisAccount" class="com.prakhar.parwal.dependency_injection.BankAccount">
+		<property name="accountNumber" value="123456"/>
+		<property name="type" value="1"/>
+	</bean>
+
+	<bean id="unionAccount" class="com.prakhar.parwal.dependency_injection.BankAccount">
+		<property name="accountNumber" value="123457"/>
+		<property name="type" value="1"/>
+	</bean>
+
+	<bean id="hdfcAccount" class="com.prakhar.parwal.dependency_injection.BankAccount">
+		<property name="accountNumber" value="123458"/>
+		<property name="type" value="2"/>
+	</bean>
+
 	
 	<bean id="addressBean" class="com.prakhar.parwal.dependency_injection.Address">
 		<property name="houseNumber" value="101"/>
@@ -33,4 +66,14 @@
 		<property name="type" value="2"/>
 		<property name="name" value="i20"/>
 	</bean>
+	
+	<bean id="customObject1" class="com.prakhar.parwal.dependency_injection.CustomObject">
+		<property name="id" value="101"/>
+	</bean>
+	
+	<bean id="customObject2" class="com.prakhar.parwal.dependency_injection.CustomObject">
+		<property name="id" value="102"/>
+	</bean>
+	
+	
 </beans>

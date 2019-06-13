@@ -1,10 +1,18 @@
 package com.prakhar.parwal.dependency_injection;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 public class Person {
 
 	private int id;
 	private String name;
 	private Address address;
+	private List<Vehicle> vehicles;
+	private Set<BankAccount> bankAccounts;
+	//Custom object
+	private Map<Integer, CustomObject> customObjects;
 	
 	public int getId() {
 		return id;
@@ -26,10 +34,34 @@ public class Person {
 		this.address = address;
 	}
 	
-	@Override
-	public String toString()
-	{
-		return this.id+this.name+this.address;
+	public List<Vehicle> getVehicles() {
+		return vehicles;
 	}
+	public void setVehicles(List<Vehicle> vehicles) {
+		this.vehicles = vehicles;
+	}
+	
+	
+	public Set<BankAccount> getBankAccounts() {
+		return bankAccounts;
+	}
+	public void setBankAccounts(Set<BankAccount> bankAccounts) {
+		this.bankAccounts = bankAccounts;
+	}
+	
+	public Map<Integer, CustomObject> getCustomObjects() {
+		return customObjects;
+	}
+	public void setCustomObjects(Map<Integer, CustomObject> customObjects) {
+		this.customObjects = customObjects;
+	}
+	
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", vehicles=" + vehicles
+				+ ", bankAccounts=" + bankAccounts + "]";
+	}
+	
+	
 	
 }
