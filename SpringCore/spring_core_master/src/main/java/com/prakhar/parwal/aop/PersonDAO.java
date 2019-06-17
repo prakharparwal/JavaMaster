@@ -8,6 +8,7 @@ public class PersonDAO {
 	
 	public void addPerson(Person p) {
 		persons.add(p);
+		System.out.println("Person added to repository "+p);
 	}
 	
 }
