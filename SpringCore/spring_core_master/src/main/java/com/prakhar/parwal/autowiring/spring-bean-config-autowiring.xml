@@ -9,7 +9,7 @@
 			<property name="fullAddress" value="Chandigarh"/>
 		</bean>
 		
-		<bean id="employeeBean" class="com.prakhar.parwal.autowiring.Employee">
+		<bean id="employeeBean" class="com.prakhar.parwal.autowiring.Employee" >
 			<property name="id" value="01"/>
 			<property name="name" value="Prakhar"/>
 		</bean>

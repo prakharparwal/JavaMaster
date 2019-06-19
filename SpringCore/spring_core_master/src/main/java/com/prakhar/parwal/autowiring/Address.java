@@ -1,5 +1,8 @@
 package com.prakhar.parwal.autowiring;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
 
 	private int id;
