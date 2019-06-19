@@ -10,10 +10,12 @@ public class VehicleFactory {
 		
 			case "Bike": {
 				vehicle = new Bike();
+				break;
 			}
 			
 			case "Car": {
 				vehicle = new Car();
+				break;
 			}
 			
 		}
