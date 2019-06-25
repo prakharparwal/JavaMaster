@@ -1,4 +1,4 @@
-package com.prakhar.parwal.factory;
+package com.prakhar.parwal.creational.factory;
 
 public class Performer {
 

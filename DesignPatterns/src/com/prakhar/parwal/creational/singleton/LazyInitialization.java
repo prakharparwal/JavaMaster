@@ -1,4 +1,4 @@
-package com.prakhar.parwal.singleton;
+package com.prakhar.parwal.creational.singleton;
 
 public class LazyInitialization {
 

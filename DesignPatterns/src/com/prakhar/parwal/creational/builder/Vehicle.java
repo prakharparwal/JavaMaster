@@ -1,4 +1,4 @@
-package com.prakhar.parwal.builder;
+package com.prakhar.parwal.creational.builder;
 
 public class Vehicle {
 
