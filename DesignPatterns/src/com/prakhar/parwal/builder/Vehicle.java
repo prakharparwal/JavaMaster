@@ -9,6 +9,30 @@ public class Vehicle {
 	//Optional 
 	private int mirrors;
 	
+	public Engine getEngine() {
+		return engine;
+	}
+
+	public void setEngine(Engine engine) {
+		this.engine = engine;
+	}
+
+	public int getWheels() {
+		return wheels;
+	}
+
+	public void setWheels(int wheels) {
+		this.wheels = wheels;
+	}
+
+	public int getMirrors() {
+		return mirrors;
+	}
+
+	public void setMirrors(int mirrors) {
+		this.mirrors = mirrors;
+	}
+
 	public Vehicle(VehicleBuilder vehicleBuilder)
 	{
 		this.engine = vehicleBuilder.engine;
@@ -33,13 +57,14 @@ public class Vehicle {
 		}
 		
 		public VehicleBuilder setMirrors(int mirrors) {
-			 this.setMirrors(mirrors);
+			 this.mirrors = mirrors;
 			 return this;
 		}
 		
 		public Vehicle build()
 		{
-			return new Vehicle(this);
+			Vehicle vehicle = new Vehicle(this);
+			return vehicle;
 		}
 		
 	}
