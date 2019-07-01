@@ -17,6 +17,6 @@ public class TestController {
 		
 		System.out.println("Request came at TestController.test()");
 		
-		return new ModelAndView();
+		return new ModelAndView("welcome");
 	}
 }
