@@ -2,5 +2,8 @@
 	<head></head>
 	<body>
 		Welcome
+		<br>
+		${person}
+		${person1}
 	</body>
 </html>
