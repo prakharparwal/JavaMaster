@@ -26,8 +26,9 @@ public class MasterController {
 	}
 	
 	@GetMapping("/logInPage")
-	public String logInPage() {
+	public String logInPage(ModelMap model) {
 		
+		model.addAttribute("person", new Person());
 		return "log-in";
 	}
 	
@@ -40,6 +41,16 @@ public class MasterController {
 		System.out.println(person.getAge());
 		
 		return "welcome";
+	}
+	
+	
+	@RequestMapping(value = "/logIn", method = RequestMethod.POST)
+	public String logIn(Person person, BindingResult result) {
+		
+		System.out.println(person.getUsername());
+		System.out.println(person.getPassword());
+		
+		return "home";
 	}
 	
 }

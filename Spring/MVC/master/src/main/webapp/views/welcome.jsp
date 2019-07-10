@@ -10,7 +10,7 @@
 		</div>
 		
 		<div>
-			<form:form method='GET' action='/master/logIn'>
+			<form:form method='GET' action='/master/logInPage'>
 				<input type='submit' value='Log in'>
 			</form:form>
 		</div>
