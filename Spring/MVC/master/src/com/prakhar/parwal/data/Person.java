@@ -1,11 +1,29 @@
 package com.prakhar.parwal.data;
 
-public class Person {
+import java.io.Serializable;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
+public class Person implements Serializable {
+
+	
 	private Integer id;
+	
+	@NotEmpty(message = "Name required")
 	private String name;
+	
+	@NotNull
 	private String username;
+	
+	@NotNull
 	private String password;
+	
+	@NotNull
+	@Min(value = 0, message = "Must not be less than 0")
+	@Max(value = 100, message = "Must not be greater than 100")
 	private Integer age;
 	
 	

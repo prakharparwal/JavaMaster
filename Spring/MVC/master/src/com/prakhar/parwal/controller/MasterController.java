@@ -1,5 +1,7 @@
 package com.prakhar.parwal.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -33,14 +35,27 @@ public class MasterController {
 	}
 	
 	@RequestMapping(value = "/signUp", method = RequestMethod.POST)
-	public String signUp(Person person, BindingResult result) {
+	public String signUp(@Valid Person person, BindingResult result, ModelMap model) {
 		
+		System.out.println(person.getId());
 		System.out.println(person.getName());
 		System.out.println(person.getUsername());
 		System.out.println(person.getPassword());
 		System.out.println(person.getAge());
 		
-		return "welcome";
+		if(result.hasErrors())
+		{
+			System.out.println("Has errors");
+			return "sign-up";
+		}
+			
+		else 
+			System.out.print("Everything is fine");
+		
+		model.addAttribute("message", "SignUp successful");
+		model.addAttribute("person", person);
+		
+		return "home";
 	}
 	
 	
@@ -51,6 +66,13 @@ public class MasterController {
 		System.out.println(person.getPassword());
 		
 		return "home";
+	}
+	
+	@RequestMapping(value = "/signUpSuccess", method = RequestMethod.GET)
+	public String signUpSuccess(ModelMap model) {
+		
+		
+		return "sign-up-success";
 	}
 	
 }

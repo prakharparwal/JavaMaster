@@ -16,6 +16,7 @@
 				<div>
 					<form:label path='name'>Name</form:label> 
 					<form:input path='name' />
+					<form:errors path="name" cssClass="error"/>  
 				</div>
 				<div>
 					<form:label path='username'>Username</form:label>
@@ -28,6 +29,7 @@
 				<div>
 					<form:label path='age'>Age</form:label>
 					<form:input path='age'/>
+					<form:errors path="age" cssClass="error"/>  
 				</div>
 				<div>
 					<input type='submit' value='Submit'/>
