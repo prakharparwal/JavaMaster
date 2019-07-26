@@ -20,4 +20,16 @@
 		<property name='suffix' value='.jsp'></property>	
 	</bean>
 
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="com.prakhar.parwal.exception.ErrorInFormDataException">
+                    error-form-data-exception-view
+                </prop>
+            </props>
+        </property>
+        <property name="defaultErrorView" value="generic-exception-view"/>
+    </bean>
+
+
 </beans>
