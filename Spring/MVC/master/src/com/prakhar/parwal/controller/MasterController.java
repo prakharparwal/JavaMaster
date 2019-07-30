@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.prakhar.parwal.data.Person;
+import com.prakhar.parwal.exception.ErrorInFormDataException;
 
 @Controller
 public class MasterController {
@@ -35,7 +36,7 @@ public class MasterController {
 	}
 	
 	@RequestMapping(value = "/signUp", method = RequestMethod.POST)
-	public String signUp(@Valid Person person, BindingResult result, ModelMap model) {
+	public String signUp(@Valid Person person, BindingResult result, ModelMap model) throws ErrorInFormDataException {
 		
 		System.out.println(person.getId());
 		System.out.println(person.getName());
@@ -46,7 +47,8 @@ public class MasterController {
 		if(result.hasErrors())
 		{
 			System.out.println("Has errors");
-			return "sign-up";
+			throw new ErrorInFormDataException("Error in form data expception");
+			//throw new NullPointerException();
 		}
 			
 		else 
