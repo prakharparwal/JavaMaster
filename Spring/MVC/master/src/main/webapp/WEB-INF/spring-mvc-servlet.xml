@@ -13,6 +13,14 @@
 	<context:annotation-config />
 	<mvc:annotation-driven validator="myBeansValidator" />
 	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/signUp" />
+			<bean class="com.prakhar.parwal.interceptors.SignUpInterceptor" />
+		</mvc:interceptor>
+		<bean class="com.prakhar.parwal.interceptors.BaseInterceptor" />
+	</mvc:interceptors>
+	
 	<bean id="myBeansValidator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 	
 	<bean class='org.springframework.web.servlet.view.InternalResourceViewResolver'>
@@ -30,6 +38,5 @@
         </property>
         <property name="defaultErrorView" value="generic-exception-view"/>
     </bean>
-
 
 </beans>
