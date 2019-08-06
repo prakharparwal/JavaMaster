@@ -5,10 +5,12 @@ import javax.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.prakhar.parwal.data.Person;
 import com.prakhar.parwal.exception.ErrorInFormDataException;
@@ -20,7 +22,7 @@ public class MasterController {
 	public String signUpPage(ModelMap model) {
 		
 		model.addAttribute("person", new Person());
-		return "sign-up";
+		throw new NullPointerException("NPE");
 	}
 	
 	@GetMapping("/")
@@ -76,5 +78,14 @@ public class MasterController {
 		
 		return "sign-up-success";
 	}
+	
+	/*
+	 * @ExceptionHandler(NullPointerException.class) public ModelAndView
+	 * handleNullPointerException(NullPointerException npe) {
+	 * 
+	 * ModelAndView mv = new ModelAndView("null-pointer-exception"); System.out.
+	 * println("Null pointer excpetion has encountered. Handled using exception handler"
+	 * ); return mv; }
+	 */
 	
 }
