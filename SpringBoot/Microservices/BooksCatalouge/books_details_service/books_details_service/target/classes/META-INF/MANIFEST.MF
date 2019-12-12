@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: books_details_service
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: prakhar.parwal
+Implementation-Vendor-Id: com.prakhar.parwal
+Build-Jdk: 1.8.0_221
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/books_details_service
+Created-By: Maven Integration for Eclipse
+
